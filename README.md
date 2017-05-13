@@ -3,6 +3,11 @@ cluster tweets by utilizing Jaccard Distance metric and K-means clustering algor
 
 Created by Xiangru Zhou
 *************************************************
+Twitter provides a service for posting short messages. In practice, many of the tweets are very similar to each other and can be clustered together. By clustering similar tweets together, we can generate a more concise and organized representation of the raw tweets, which will be very useful for many Twitter-based applications (e.g., truth discovery, trend analysis, search ranking, etc.)
+
+In this project, you will learn how to cluster tweets by utilizing Jaccard Distance metric and K-means clustering algorithm.
+
+******************************************
 
 Objectives:
 
@@ -28,6 +33,8 @@ It is 0 if they are the same.
 
 It is 1 if they are completely different (i.e., no overlapping words).
 
+Here is the reference for more details about Jaccard Distance: http://en.wikipedia.org/wiki/Jaccard_index
+
 Note that the tweets do not have the numerical coordinates in Euclidean space, you might want to think of a sensible way to compute the "centroid" of a tweet cluster. This could be the tweet having minimum distance to all of the other tweets in a cluster.
 
 ********************************
@@ -37,4 +44,11 @@ The number of clusters K (default to K=25).
 
 The tweet dataset is in JSON format.
 
+The list of initial centroids are given.
+
 Note that each element in this list is the tweet ID (i.e., the id field in JSON format) of the tweet in the dataset.
+
+***************************************
+Validation:
+
+The usual method of evaluating the goodness of clustering will be used. It is the Sum of Squared Error (SSE) function.
